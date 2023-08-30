@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --green-300: #84CC16;
+  --green-400: #65A30D;
+  --green-500: #4D7C0F;
+
+  --txt-title: #292524;
+  --txt-title2: #44403C;
+  --txt-body: #78716C;
+}
+
+::selection {
+  background-color: var(--green-400);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  /* background-color: rgb(228, 228, 228); */
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--green-500);
+  border-radius: 1rem;
+}
+
+header .extramother{
+  display: none;
+}
+
+.avatar {
+  border-radius: 50%;
+  background-image: url("assets/avatar.jpeg");
+  height: 14.5rem;
+  width: 14.5rem;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 2.5rem;
+}
+
+header .navmenu {
+  display: flex;
+  justify-content: space-between;
+  margin: 2.5rem 4rem 5rem;
+  font-family: "inter";
+  font-weight: bold;
+
+  animation: topdown 700ms;
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header .navmenu a {
+  color: var(--txt-title);
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: .3s ease;
+}
+
+header .navmenu a:hover {
+  border-bottom: 3px solid var(--green-300);
+}
+
+header h1 {
+  text-align: center;
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+  font-size: 3.2rem;
+  color: var(--txt-title);
+  margin-bottom: 1.5rem;
+}
+
+header .about p {
+  border-left: 1rem solid #3F6212;
+  margin: 0 3.2rem 2.5rem;
+  font-family: "inter", sans-serif;
+  font-size: 1.4rem;
+  padding-left: 2rem;
+  color: var(--txt-body);
+}
+
+header .icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+
+.icons svg path {
+  transition: 1s ease;
+}
+.icons svg:hover path {
+  fill: var(--green-300);
+}
+section {
+  margin: 7.5rem 3.2rem 0;
+}
+.title {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.title hr {
+  width: 100%;
+  height: .5rem;
+  border-width:0;
+  background-color:var(--green-400);
+}
+
+.title h2 {
+  font-size: 2.4rem;
+  color: var(--txt-title2);
+  font-family: "PT Serif", serif;
+}
+
+.experiencias {
+  display: flex;
+  align-items: start;
+  text-align: justify;
+}
+.datas {
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+  color: var(--txt-title2);
+  font-size: 1.6rem;
+  margin-right: 2.5rem;
+}
+.texto {
+  font-family: "Inter", sans-serif;
+  font-weight: regular;
+  color: var(--txt-body);
+  font-size: 1.3rem;
+}
+
+.experiencias h3{
+  font-size: 1.3rem;
+  color: var(--txt-title2);
+  margin-bottom: 1rem;
+  padding-top: .25rem;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+.card {
+  filter: drop-shadow(0 0 4px rgba(0,0,0,.25));
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  border-radius: 1.5rem 0;
+  margin-right: 1.5rem;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem 0;
+  margin-right: 1.5rem;
+}
+
+.cardtext {
+  /* position: absolute; */
+  top: 0rem;
+  padding: 1rem 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.cardtext h3 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
+}
+
+.cardtext p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
+}
+
+.iconwrapper {
+  /* position: absolute; */
+  bottom: 1rem;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.iconwrapper a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-family: "inter", sans-serif;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
+  gap: .25rem;
+}
+
+.cardcontent {
+  position: absolute;
+  z-index: 6;
+  top: 0; 
+  width: 100%;
+  height: 100%;
+  padding: 0 1.5rem 1rem;
+  opacity: 0;
+  background-color: rgba(0,0,0,.65);
+  border-radius: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: .3s ease;
+}
+
+.cardcontent:hover, .cardcontent:active {
+  opacity: 1;
+}
+
+.contatos {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contatos a {
+  color: var(--green-500);
+  text-decoration: none;
+  font-weight: 800;
+  transition: .3s ease;
+}
+
+.contatos a:hover {
+  color: var(--green-300);
+}
+
+.contatos svg path{
+  transition: .3s ease;
+}
+.contatos svg:hover path{
+  fill: #4D7C0F;
+}
+
+.github {
+  max-width: 2rem;
+}
+
+section#contato {
+  padding-bottom: 5vh;
+}
+
+@media (min-width: 700px) {
+  .galeria {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3.5rem;
+  }
+  header .navmenu {
+    display: none;
+  }
+  header {
+    max-width: 25vw;
+    height: 100vh;
+    padding: 8vh 4.5rem 0;
+    border-radius: 0 0 5rem;
+    box-shadow: 0 0 8px rgba(0,0,0,.25);
+    position: absolute;
+    z-index: 9999;
+    background-color: white;
+  }
+
+  header .about p {
+    margin: 0 0 3.5rem;
+  }
+
+  header .extramother{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  header .extra{
+    display: flex;
+    font-family: "Inter";
+    color: #A8A29E;
+    font-size: 1.4rem;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  header .extra svg{
+    width: 2.5rem;
+  }
+
+  header .extra p{
+    width: 100%;
+  }
+
+  body {
+    display: flex;
+    max-height: 100vh;
+  }
+  body main {
+    padding-left: 20px;
+    margin-left: 25vw;
+    overflow-y: auto;
+  }
+  #contato {
+    display: none;
+  }
+
+  .card {
+    height: 30vh;
+  }
+}
+
